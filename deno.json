@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "start": "deno run -A ./src/server.ts",
+    "create-root": "deno run -A ./src/scripts/create-root.ts"
+  },
+  "importMap": "./import_map.json",
+  "compilerOptions": {
+    "types": ["./types.d.ts"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "passport": "npm:passport@0.6.0",
+    "cookie-parser": "npm:cookie-parser@^1.4.3",
+    "passport-local": "npm:passport-local@^1.0.0",
+    "express": "npm:express@^4.17",
+    "mongoose": "npm:mongoose@^6.7",
+    "passport-jwt": "npm:passport-jwt@^4.0.0",
+    "@/": "./src/"
+  }
+}
