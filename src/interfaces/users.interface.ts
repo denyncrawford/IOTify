@@ -23,6 +23,8 @@ export interface IUserSensitiveFields {
 
 export interface IUser extends IUserDTO {
   _id?: ObjectId;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface IUserTokenPayload {

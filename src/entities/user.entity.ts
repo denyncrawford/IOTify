@@ -38,7 +38,22 @@ UserSchema.path("password").validate(
 // Replace password with hash
 
 UserSchema.pre("save", async function (next) {
+  const now = new Date();
+  if (!this.createdAt) {
+    this.createdAt = now;
+  }
+  this.updatedAt = now;
+  if (!this.isModified("password")) {
+    return next();
+  }
   this.password = await createPasswordHash(this.password);
+  next();
+});
+
+// Remove password from response
+
+UserSchema.pre("find", function (next) {
+  this.select("-password");
   next();
 });
 

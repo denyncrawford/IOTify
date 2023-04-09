@@ -14,4 +14,6 @@ export interface IDeviceDTO {
 
 export interface IDevice extends IDeviceDTO {
   _id?: ObjectId;
+  createdAt?: Date;
+  updatedAt?: Date;
 }

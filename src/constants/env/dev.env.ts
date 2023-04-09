@@ -14,5 +14,6 @@ export const CONFIG = {
   },
   jwt: {
     secret: Deno.env.get('JWT_SECRET') || 'secret',
+    expiresIn: Deno.env.get('JWT_EXPIRES_IN') || '1h',
   },
 };

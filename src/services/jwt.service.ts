@@ -4,7 +4,6 @@ import { IUserTokenPayload } from '@/interfaces/users.interface.ts';
 import { ENV } from '@/constants/env/mod.ts';
 
 export const createToken = (user: IUserTokenPayload) => {
-  console.log({ user })
-  const token = sign(user, ENV.jwt.secret!, { expiresIn: '1h' });
+  const token = sign(user, ENV.jwt.secret!, { expiresIn: ENV.jwt.expiresIn });
   return token;
 }

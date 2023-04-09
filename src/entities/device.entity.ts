@@ -14,6 +14,17 @@ DeviceSchema.path("type").required(true, "Type is required");
 DeviceSchema.path("doorId").required(true, "DoorId is required");
 DeviceSchema.path("deviceId").required(true, "DeviceId is required");
 
+// Update timestamps
+
+DeviceSchema.pre("save", function (next) {
+  const now = new Date();
+  if (!this.createdAt) {
+    this.createdAt = now;
+  }
+  this.updatedAt = now;
+  next();
+});
+
 // Export the device entity
 
 export default model<IDevice>("Device", DeviceSchema);

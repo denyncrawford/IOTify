@@ -15,7 +15,7 @@ export enum CodeType {
 }
 
 export interface ICodeDTO {
-  code: string;
+  code?: string;
   name: string;
   description: string;
   user?: ObjectId;
@@ -23,6 +23,7 @@ export interface ICodeDTO {
   door?: ObjectId;
   type: CodeType;
   expiresAt?: Date | null;
+  enabled: boolean;
 }
 
 export interface ICodeRaw extends ICodeDTO {
