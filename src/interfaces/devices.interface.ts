@@ -6,10 +6,12 @@ export enum DeviceType {
   CAMERA = 'camera',
 }
 
+// deviceId: is a unique identifier coming from the device
 export interface IDeviceDTO {
   name: string;
   type: DeviceType;
-  doorId: SchemaDefinitionProperty<ObjectId> ;
+  doorId: SchemaDefinitionProperty<ObjectId>;
+  deviceId: string ;
 }
 
 export interface IDevice extends IDeviceDTO {

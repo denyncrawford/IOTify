@@ -1,4 +1,4 @@
-import { genSalt, hash, compare } from 'https://deno.land/x/bcrypt@v0.4.1/mod.ts';
+import { genSalt, hash, compare } from 'bcrypt';
 
 export const createPasswordHash = async (password: string) => {
   const salt = await genSalt(10);

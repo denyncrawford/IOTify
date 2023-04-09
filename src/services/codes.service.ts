@@ -1,7 +1,7 @@
-import { ICode } from "@/interfaces/codes.interface.ts";
+import { ICode, ICodeDTO } from "@/interfaces/codes.interface.ts";
 import CodeEntity from "@/entities/code.entity.ts";
 
-export const createCode = async (codeData: ICode): Promise<ICode> => {
+export const createCode = async (codeData: ICodeDTO): Promise<ICode> => {
   try {
     if (!codeData.code) {
       codeData.code = generatePin();

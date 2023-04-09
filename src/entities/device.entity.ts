@@ -5,6 +5,7 @@ export const DeviceSchema = new Schema<IDevice>({
   name: { type: String, required: true },
   type: { type: String, required: true, default: DeviceType.LOCK },
   doorId: { type: Schema.Types.ObjectId, required: true },
+  deviceId: { type: String, required: true },
 });
 
 // Required fields formatting

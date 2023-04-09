@@ -1,5 +1,5 @@
 // @deno-types="npm:@types/express@^4.17"
-import { Router } from "npm:express@^4.17";
+import { Router } from "express";
 import { usersRouter } from "./users/users.router.ts";
 import { codesRouter } from "./codes.router.ts";
 import { housesRouter } from "./houses/mod.router.ts";
