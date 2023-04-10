@@ -2,7 +2,7 @@
 import { Router } from "express";
 import { usersRouter } from "./users/users.router.ts";
 import { codesRouter } from "./codes.router.ts";
-import { housesRouter } from "./houses/mod.router.ts";
+import { housesRouter } from "./houses/houses.router.ts";
 import { logsRouter } from "./logs.router.ts";
 import { devicesRouter } from "./devices.router.ts";
 

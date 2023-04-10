@@ -4,6 +4,7 @@ export interface IDoorDTO {
   name: string;
   description: string;
   devices?: ObjectId[];
+  houseId?: ObjectId;
 }
 
 export interface IDoor extends IDoorDTO {

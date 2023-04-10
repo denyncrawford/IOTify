@@ -1,9 +1,12 @@
 import { IDevice, IDeviceDTO } from "@/interfaces/devices.interface.ts";
 import DeviceEntity from "@/entities/device.entity.ts";
+import { addDeviceToDoor } from "./doors.service.ts";
+import { ObjectId } from "mongoose";
 
 export const createDevice = async (deviceData: IDeviceDTO): Promise<IDevice> => {
   try {
     const device = await DeviceEntity.create(deviceData);
+    await addDeviceToDoor(device.doorId as ObjectId, device._id);
     return device;
   } catch (error) {
     throw new Error(error);

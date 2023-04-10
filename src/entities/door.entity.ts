@@ -6,6 +6,7 @@ export const DoorSchema = new Schema<IDoor>({
   name: { type: String, required: true },
   description: { type: String, required: true },
   devices: [{ type: Schema.Types.ObjectId, ref: "Device" }],
+  houseId: { type: Schema.Types.ObjectId, ref: "House" },
 });
 
 // Required fields formatting
